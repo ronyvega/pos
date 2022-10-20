@@ -45,22 +45,22 @@
                 </b-table-column>
 
                 <b-table-column field="precioCompra" label="Precio compra" sortable v-slot="props">
-                    ${{ props.row.precioCompra }}
+                    S/.{{ props.row.precioCompra }}
                 </b-table-column>
 
                 <b-table-column field="precioVenta" label="Precio venta" sortable v-slot="props">
-                    ${{ props.row.precioVenta }}
+                    S/.{{ props.row.precioVenta }}
                 </b-table-column>
 
                 <b-table-column field="ganancia" label="Ganacia" sortable v-slot="props">
-                    <b>${{ props.row.precioVenta - props.row.precioCompra }}</b>
+                    <b>S/.{{ props.row.precioVenta - props.row.precioCompra }}</b>
                 </b-table-column>
 
                 <b-table-column field="vendidoMayoreo" label="¿Mayoreo?" sortable v-slot="props">
                     <b-tag type="is-danger" v-if="!props.row.vendidoMayoreo">No</b-tag>
 
                     <div v-if="props.row.vendidoMayoreo">
-                        <b>Precio: </b>${{ props.row.precioMayoreo}}<br>
+                        <b>Precio: </b>S/.{{ props.row.precioMayoreo}}<br>
                         <b>A partir: </b>{{ props.row.cantidadMayoreo}}
                     </div>
                 </b-table-column>
@@ -254,8 +254,8 @@
                     this.cartasTotales = [
                         {nombre: "Número Productos", total: this.productos.length, icono: "package-variant-closed", clase: "has-text-danger"},
                         {nombre: "Total productos", total: respuesta.totalProductos, icono: "chart-bar-stacked", clase: "has-text-primary"},
-                        {nombre: "Total inventario", total: '$' + respuesta.totalInventario, icono: "currency-usd", clase: "has-text-success"},
-                        {nombre: "Ganancia", total: '$' + respuesta.gananciaInventario, icono: "currency-usd", clase: "has-text-info"},
+                        {nombre: "Total inventario", total: 'S/.' + respuesta.totalInventario, icono: "currency-usd", clase: "has-text-success"},
+                        {nombre: "Ganancia", total: 'S/.' + respuesta.gananciaInventario, icono: "currency-usd", clase: "has-text-info"},
                     ]
                     this.cargando = false
                 })
