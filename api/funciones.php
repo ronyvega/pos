@@ -12,7 +12,7 @@ define("FECHA_HOY",date("Y-m-d") );
 
 define('DIRECTORIO', './logos/');
 
-define("PASSWORD_DEFECTO", "PacoHunterDev");
+define("PASSWORD_DEFECTO", "123admin");
 
 
 function codificar($imagen) {
