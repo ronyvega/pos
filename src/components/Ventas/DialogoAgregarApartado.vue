@@ -9,12 +9,12 @@
 					@click="$emit('close', 'apartado')"/>
 			</header>
 			<section class="modal-card-body">
-				<p class="is-size-1 has-text-weight-bold">Total ${{ totalVenta }}</p>
+				<p class="is-size-1 has-text-weight-bold">Total S/.{{ totalVenta }}</p>
 				<busqueda-cliente @seleccionado="onSeleccionado"/>
 				<b-field label="Pago inicial" >
 					<b-input step="any" icon="currency-usd" type="number" placeholder="Cuánto deja el cliente" v-model="pagado" @input="calcularRestante" size="is-medium"></b-input>
 				</b-field>
-				<p class="is-size-1 has-text-weight-bold">Por Pagar ${{ porPagar }}</p>
+				<p class="is-size-1 has-text-weight-bold">Por Pagar S/.{{ porPagar }}</p>
 			</section>
 			<footer class="modal-card-foot">
 				<b-button

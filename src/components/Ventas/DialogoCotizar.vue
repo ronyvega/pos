@@ -9,7 +9,7 @@
 					@click="$emit('close', 'cotiza')"/>
 			</header>
 			<section class="modal-card-body">
-				<p class="is-size-1 has-text-weight-bold">Total ${{ totalVenta }}</p>
+				<p class="is-size-1 has-text-weight-bold">Total S/.{{ totalVenta }}</p>
 				<busqueda-cliente @seleccionado="onSeleccionado"/>
 			</section>
 			<footer class="modal-card-foot">

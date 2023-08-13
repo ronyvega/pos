@@ -9,12 +9,12 @@
 					@click="$emit('close', 'venta')"/>
 			</header>
 			<section class="modal-card-body">
-				<p class="is-size-1 has-text-weight-bold">Total ${{ totalVenta }}</p>
+				<p class="is-size-1 has-text-weight-bold">Total S/.{{ totalVenta }}</p>
 				<busqueda-cliente @seleccionado="onSeleccionado" />
 				<b-field label="El cliente paga con" >
 					<b-input step="any" ref="pagado" icon="currency-usd" type="number" placeholder="Monto pagado" v-model="pagado" @input="calcularCambio" @keyup.enter.native="terminarVenta" size="is-medium"></b-input>
 				</b-field>
-				<p class="is-size-1 has-text-weight-bold">Cambio ${{ cambio }}</p>
+				<p class="is-size-1 has-text-weight-bold">Cambio S/.{{ cambio }}</p>
 			</section>
 			<footer class="modal-card-foot">
 				<b-button

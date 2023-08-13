@@ -59,7 +59,7 @@
 
 			onLiquidar(apartado) {
                 this.$buefy.dialog.confirm({
-                    message: '¿Liquidar apartado? El cliente debe pagar: $' + apartado.porPagar,
+                    message: '¿Liquidar apartado? El cliente debe pagar: S/.' + apartado.porPagar,
                     cancelText: 'Cancelar',
                     confirmText: 'Liquidar',
                     onConfirm: () => {
@@ -82,7 +82,7 @@
 
             onAbonar(apartado) {
                 this.$buefy.dialog.prompt({
-                    message: `Escribe el total del abono. Restan: $` + apartado.porPagar,
+                    message: `Escribe el total del abono. Restan: S/.` + apartado.porPagar,
                     cancelText: 'Cancelar',
                     confirmText: 'Abonar',
                     inputAttrs: {
@@ -129,11 +129,11 @@
 
 					this.totalesGenerales = [
                         {nombre: "# Apartados", total: this.apartados.length, icono: "wallet-travel", clase: "has-text-primary"},
-                        {nombre: "Total ", total: '$' + resultado.totalApartados, icono: "cash-fast", clase: "has-text-success"},
-                        {nombre: "Por pagar", total: '$' + resultado.totalPorPagar, icono: "alert", clase: "has-text-danger"},
-                        {nombre: "Pagos", total: '$' + resultado.totalPagos, icono: "account-cash", clase: "has-text-grey-light"},
+                        {nombre: "Total ", total: 'S/.' + resultado.totalApartados, icono: "cash-fast", clase: "has-text-success"},
+                        {nombre: "Por pagar", total: 'S/.' + resultado.totalPorPagar, icono: "alert", clase: "has-text-danger"},
+                        {nombre: "Pagos", total: 'S/.' + resultado.totalPagos, icono: "account-cash", clase: "has-text-grey-light"},
                         {nombre: "# Productos", total: Utiles.calcularProductosVendidos(this.apartados), icono: "package-variant", clase: "has-text-warning"},
-                        {nombre: "Ganancia", total: '$' + Utiles.calcularTotalGanancia(this.apartados), icono: "currency-usd", clase: "has-text-info"}
+                        {nombre: "Ganancia", total: 'S/.' + Utiles.calcularTotalGanancia(this.apartados), icono: "currency-usd", clase: "has-text-info"}
                     ]
 					this.cargando = false
 				})
