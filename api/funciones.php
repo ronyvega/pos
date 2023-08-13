@@ -1,31 +1,12 @@
 <?php
 /*
-By
-   ___                                            _                   ___              
-  / _ \  __ _   ___   ___    /\  /\ _   _  _ __  | |_   ___  _ __    /   \  ___ __   __
- / /_)/ / _` | / __| / _ \  / /_/ /| | | || '_ \ | __| / _ \| '__|  / /\ / / _ \\ \ / /
-/ ___/ | (_| || (__ | (_) |/ __  / | |_| || | | || |_ |  __/| |    / /_// |  __/ \ V / 
-\/      \__,_| \___| \___/ \/ /_/   \__,_||_| |_| \__| \___||_|   /___,'   \___|  \_/  
-                                                                                       
+
 Aquí están todas las funciones empleadas para administrar los datos o como se diga.
 En cada función simplemente colocamos la sentencia SQL que necesitamos, si es necesario colocamos los 
 parámetros necesario y consumimos las funciones de la bd.
 
 */
 
-
-/*
-
- _______      ___  __   __  _______  _______  _______  _______ 
-|   _   |    |   ||  | |  ||       ||       ||       ||       |
-|  |_|  |    |   ||  | |  ||  _____||_     _||    ___||  _____|
-|       |    |   ||  |_|  || |_____   |   |  |   |___ | |_____ 
-|       | ___|   ||       ||_____  |  |   |  |    ___||_____  |
-|   _   ||       ||       | _____| |  |   |  |   |___  _____| |
-|__| |__||_______||_______||_______|  |___|  |_______||_______|
-
-
-*/
 
 define("FECHA_HOY",date("Y-m-d") );
 
