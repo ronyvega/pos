@@ -58,7 +58,7 @@
 
             onLiquidar(cuenta) {
                 this.$buefy.dialog.confirm({
-                    message: '¿Liquidar cuenta? El cliente debe pagar: $' + cuenta.porPagar,
+                    message: '¿Liquidar cuenta? El cliente debe pagar: S/.' + cuenta.porPagar,
                     cancelText: 'Cancelar',
                     confirmText: 'Liquidar',
                     onConfirm: () => {
@@ -81,7 +81,7 @@
 
             onAbonar(cuenta) {
                 this.$buefy.dialog.prompt({
-                    message: `Escribe el total del abono. Restan: $` + cuenta.porPagar,
+                    message: `Escribe el total del abono. Restan: S/.` + cuenta.porPagar,
                     cancelText: 'Cancelar',
                     confirmText: 'Abonar',
                     inputAttrs: {
@@ -128,11 +128,11 @@
 
                     this.totalesGenerales = [
                         {nombre: "# Cuentas", total: this.cuentas.length, icono: "wallet", clase: "has-text-primary"},
-                        {nombre: "Total ", total: '$' + resultado.totalCuentas, icono: "cash-fast", clase: "has-text-success"},
-                        {nombre: "Por pagar", total: '$' + resultado.totalPorPagar, icono: "alert", clase: "has-text-danger"},
-                        {nombre: "Pagos", total: '$' + resultado.totalPagos, icono: "account-cash", clase: "has-text-grey-light"},
+                        {nombre: "Total ", total: 'S/.' + resultado.totalCuentas, icono: "cash-fast", clase: "has-text-success"},
+                        {nombre: "Por pagar", total: 'S/.' + resultado.totalPorPagar, icono: "alert", clase: "has-text-danger"},
+                        {nombre: "Pagos", total: 'S/.' + resultado.totalPagos, icono: "account-cash", clase: "has-text-grey-light"},
                         {nombre: "# Productos", total: Utiles.calcularProductosVendidos(this.cuentas), icono: "package-variant", clase: "has-text-warning"},
-                        {nombre: "Ganancia", total: '$' + Utiles.calcularTotalGanancia(this.cuentas), icono: "currency-usd", clase: "has-text-info"}
+                        {nombre: "Ganancia", total: 'S/.' + Utiles.calcularTotalGanancia(this.cuentas), icono: "currency-usd", clase: "has-text-info"}
                     ]
                     this.cargando = false
                 })

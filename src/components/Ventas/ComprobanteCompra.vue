@@ -16,15 +16,15 @@
                 <tbody>
                     <tr v-for="(producto, index) in venta.productos" :key="index">
                         <td>{{ producto.nombre }}</td>
-                        <td>${{ producto.precio}} X {{ producto.cantidad }}</td>
-                        <td>${{ producto.precio * producto.cantidad }}</td>
+                        <td>S/.{{ producto.precio}} X {{ producto.cantidad }}</td>
+                        <td>S/.{{ producto.precio * producto.cantidad }}</td>
                     </tr>
                 </tbody>
             </table>
-            <p><b>Total:</b>${{ venta.total }}</p>
-            <p v-if="tipo !== 'cotiza'"><b>Su pago:</b>${{ venta.pagado }}</p>
-            <p v-if="tipo === 'venta'"><b>Cambio:</b>${{ venta.pagado - venta.total }}</p>
-            <p v-if="tipo === 'cuenta' || tipo === 'apartado'"><b>Por pagar:</b>${{ venta.porPagar }}</p>
+            <p><b>Total:</b>S/.{{ venta.total }}</p>
+            <p v-if="tipo !== 'cotiza'"><b>Su pago:</b>S/.{{ venta.pagado }}</p>
+            <p v-if="tipo === 'venta'"><b>Cambio:</b>S/.{{ venta.pagado - venta.total }}</p>
+            <p v-if="tipo === 'cuenta' || tipo === 'apartado'"><b>Por pagar:</b>S/.{{ venta.porPagar }}</p>
             <p><b>Gracias por su preferencia</b></p>
             <p>----------------------------</p>
             <p>Sistema de ventas por</p>

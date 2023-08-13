@@ -92,7 +92,7 @@
                         </b-table-column>
 
                         <b-table-column field="total" label="Total ventas" v-slot="props">
-                            ${{ props.row.total }}
+                            S/.{{ props.row.total }}
                         </b-table-column>
 
                         <b-table-column field="progreso" label="Progreso" v-slot="props">
@@ -257,11 +257,11 @@
 
             crearCartas(ingresos){
                 this.ingresos = [
-                        {nombre: "Total ingresos", total: '$' + ingresos.totalIngresos, icono: "currency-usd", clase: "has-text-success"},
-                        {nombre: "Ingresos hoy", total: '$' + ingresos.ingresosHoy, icono: "calendar", clase: "has-text-primary"},
-                        {nombre: "Ingresos semana", total: '$' + ingresos.ingresosSemana, icono: "calendar-range", clase: "has-text-info"},
-                        {nombre: "Ingresos mes", total: '$' + ingresos.ingresosMes, icono: "calendar-month", clase: "has-text-dark"},
-                        {nombre: "Ingresos pendientes", total: '$' + ingresos.ingresosPendientes, icono: "alert", clase: "has-text-danger"},
+                        {nombre: "Total ingresos", total: 'S/.' + ingresos.totalIngresos, icono: "currency-usd", clase: "has-text-success"},
+                        {nombre: "Ingresos hoy", total: 'S/.' + ingresos.ingresosHoy, icono: "calendar", clase: "has-text-primary"},
+                        {nombre: "Ingresos semana", total: 'S/.' + ingresos.ingresosSemana, icono: "calendar-range", clase: "has-text-info"},
+                        {nombre: "Ingresos mes", total: 'S/.' + ingresos.ingresosMes, icono: "calendar-month", clase: "has-text-dark"},
+                        {nombre: "Ingresos pendientes", total: 'S/.' + ingresos.ingresosPendientes, icono: "alert", clase: "has-text-danger"},
                     ]
             },
 

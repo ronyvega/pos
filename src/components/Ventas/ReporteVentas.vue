@@ -139,8 +139,8 @@
 
                     this.totalesGenerales = [
                         {nombre: "No. Ventas", total: this.ventas.length, icono: "cart", clase: "has-text-primary"},
-                        {nombre: "Total ventas", total: '$' + resultado.totalVentas, icono: "cash-fast", clase: "has-text-success"},
-                        {nombre: "Ganancia", total: '$' + Utiles.calcularTotalGanancia(this.ventas), icono: "currency-usd", clase: "has-text-info"},
+                        {nombre: "Total ventas", total: 'S/.' + resultado.totalVentas, icono: "cash-fast", clase: "has-text-success"},
+                        {nombre: "Ganancia", total: 'S/.' + Utiles.calcularTotalGanancia(this.ventas), icono: "currency-usd", clase: "has-text-info"},
                         {nombre: "Productos vendidos", total: Utiles.calcularProductosVendidos(this.ventas), icono: "package-variant", clase: "has-text-danger"},
                     ]
                     this.cargando = false
